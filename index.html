@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>⚡ 배전가공 현장 만화게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app">
+
+    <!-- START -->
+    <section id="screenStart" class="screen screen--active">
+      <div class="start">
+        <div class="start__title">⚡ 배전가공 현장</div>
+        <div class="start__sub">시공관리책임자 선택 시뮬레이션 (만화풍 · 초심플)</div>
+
+        <div class="start__hint">
+          <span class="pill">그림 1장</span>
+          <span class="pill">한 줄 설명</span>
+          <span class="pill">선택 2~3개</span>
+        </div>
+
+        <div class="start__card">
+          <div class="start__q">공사 유형을 고르세요</div>
+          <div class="grid">
+            <button class="btn" data-start="relocate">지장전주 이설</button>
+            <button class="btn" data-start="new">신규공사</button>
+            <button class="btn" data-start="transformer">노후 변압기 교체</button>
+            <button class="btn" data-start="switch">불량 개폐기 교체</button>
+          </div>
+
+          <div class="row">
+            <label class="toggle">
+              <input id="chkSound" type="checkbox" checked />
+              <span>효과음</span>
+            </label>
+            <label class="toggle">
+              <input id="chkVibe" type="checkbox" checked />
+              <span>진동</span>
+            </label>
+          </div>
+
+          <details class="details">
+            <summary>게임 규칙(짧게)</summary>
+            <ul>
+              <li><b>안전 선택이 항상 1번이 아닙니다.</b> 읽고 판단해야 합니다.</li>
+              <li>결과는 <b>누적된 선택</b>에 따라 달라집니다.</li>
+              <li>안전을 잘 지키면 <b>해피엔딩</b>으로 끝납니다.</li>
+            </ul>
+          </details>
+
+          <div class="start__note">※ 본 게임은 훈련용. 실제 작업은 규정/절차/위험성평가를 우선합니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="screenGame" class="screen">
+      <div class="game">
+        <div class="topmini">
+          <div id="projTitle" class="topmini__title">—</div>
+          <div id="sceneDots" class="dots" aria-label="진행상황"></div>
+        </div>
+
+        <div class="frame card">
+          <div class="frame__imgWrap">
+            <img id="sceneImg" class="frame__img" alt="현장 만화 장면" />
+          </div>
+
+          <div class="frame__text">
+            <div id="sceneLine" class="frame__line">—</div>
+          </div>
+
+          <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+        <div class="bottom">
+          <button id="btnHome" class="btn btn--ghost">홈</button>
+          <button id="btnRestart" class="btn btn--ghost">다시</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screenResult" class="screen">
+      <div class="result">
+        <div class="card result__card">
+          <div id="resultBadge" class="badge">—</div>
+          <img id="resultImg" class="result__img" alt="결과 만화" />
+          <div id="resultMsg" class="result__msg">—</div>
+
+          <div class="result__btns">
+            <button id="btnAgain" class="btn">다시하기</button>
+            <button id="btnBack" class="btn btn--ghost">홈으로</button>
+          </div>
+
+          <details class="details">
+            <summary>앱에 붙이기</summary>
+            <div class="mono">
+              폴더째로 올리기: <b>kePCO_overhead_cartoon/</b><br/>
+              실행 주소 예: <code>.../kePCO_overhead_cartoon/</code><br/>
+              특정 유형 바로시작: <code>index.html?type=relocate</code>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
