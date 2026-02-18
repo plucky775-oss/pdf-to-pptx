@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#475569"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <style>
+    .o{stroke:#0b1020;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+    .o2{stroke:#0b1020;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+    .txt{font: 900 44px ui-sans-serif, system-ui; fill:#0b1020}
+    .mut{fill:#0b1020;opacity:.75}
+  </style>
+  
+  
+  <rect x="0" y="0" width="1200" height="675" fill="url(#sky)"/>
+  <rect x="0" y="430" width="1200" height="245" fill="url(#road)"/>
+  <rect x="0" y="390" width="1200" height="60" fill="#94a3b8" opacity=".35"/>
+  <path class="o2" d="M0 520 H1200" stroke="#e2e8f0" opacity=".35"/>
+  <path class="o2" d="M120 555 H320 M520 555 H720 M920 555 H1120" stroke="#e2e8f0" opacity=".35"/>
+
+  <!-- checklist board -->
+  <rect x="780" y="120" width="320" height="220" rx="26" fill="#e2e8f0" class="o" filter="url(#shadow)"/>
+  <text x="940" y="175" class="txt" text-anchor="middle">✓</text>
+  <path class="o2" d="M820 220 H1060 M820 255 H1060 M820 290 H1060" stroke="#0b1020" opacity=".35"/>
+  <!-- broom -->
+  <path class="o" d="M220 360 L360 520" fill="none"/>
+  <rect x="350" y="512" width="120" height="30" rx="14" fill="#f59e0b" class="o" filter="url(#shadow)"/>
+  <!-- worker -->
+  
+      <circle cx="420" cy="340" r="42" fill="#ffd7b5" class="o" filter="url(#shadow)"/>
+      <circle cx="405" cy="332" r="6" fill="#0b1020"/>
+      <circle cx="435" cy="332" r="6" fill="#0b1020"/>
+    <path class="o2" d="M402 352 Q420 364 438 352" fill="none"/>
+      <rect x="380" y="380" width="80" height="100" rx="22" fill="#f59e0b" class="o" filter="url(#shadow)"/>
+    
+          <path class="o" d="M360 435 C380 420, 395 418, 410 422" fill="none"/>
+          <path class="o" d="M480 435 C460 420, 445 418, 430 422" fill="none"/>
+        
+  
+      <circle cx="620" cy="340" r="42" fill="#ffd7b5" class="o" filter="url(#shadow)"/>
+      <circle cx="605" cy="332" r="6" fill="#0b1020"/>
+      <circle cx="635" cy="332" r="6" fill="#0b1020"/>
+    <path class="o2" d="M602 352 Q620 364 638 352" fill="none"/>
+      <rect x="580" y="380" width="80" height="100" rx="22" fill="#f59e0b" class="o" filter="url(#shadow)"/>
+    
+          <path class="o" d="M560 435 C580 420, 595 418, 610 422" fill="none"/>
+          <path class="o" d="M680 435 C660 420, 645 418, 630 422" fill="none"/>
+        
+  <!-- speech bubble -->
+  
+      <rect x="70" y="60" width="260" height="120" rx="26" fill="#dbeafe" class="o" filter="url(#shadow)"/>
+      <path class="o" d="M140 180 L110 220 L190 180" fill="#dbeafe"/>
+      <path class="o2" d="M0 0 C30 -25, 60 25, 90 0 C120 -25, 150 25, 180 0" fill="none" transform="translate(110 130)"/>
+      <text x="274" y="122" class="txt">!</text>
+    
+  <text x="200" y="105" class="txt" text-anchor="middle">마무리</text>
+
+</svg>
